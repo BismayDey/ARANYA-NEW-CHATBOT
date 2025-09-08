@@ -1,0 +1,5 @@
+# Ignore environment variable files
+.env
+.env.*
+
+# Render deployment: Set environment variables in the Render dashboard, not in the repo
