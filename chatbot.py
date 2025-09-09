@@ -33,7 +33,7 @@ async def ping():
 @app.post("/chat")
 async def chat_with_doctor(ui: UserMessage):
 
-    chat_hist= [{"role": "system", "content": "You are the Aaranya Jharkhand Virtual Travel Assistant.
+    chat_hist= [{"role": "system", "content": """You are the Aaranya Jharkhand Virtual Travel Assistant.
 
 Scope: Only Jharkhand → destinations, culture, heritage, trip planning, travel tips, artisan marketplace.
 
@@ -47,7 +47,7 @@ Highlight tribal traditions, festivals, handicrafts, local cuisine.
 
 Share info on transport, best time to visit, stays, safety, sustainability.
 
-Limits: Do not give info outside Jharkhand. Redirect politely if asked."}]
+Limits: Do not give info outside Jharkhand. Redirect politely if asked."""}]
 
     ui = ui.msg
     chat_hist.append({"role": "user", "content": ui})
